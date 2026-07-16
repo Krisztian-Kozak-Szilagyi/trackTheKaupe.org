@@ -1,0 +1,93 @@
+// ======= DESIGN VARIABLES =======
+$background-color: #333;
+$title-font: "Poetsen One", sans-serif;
+$primary-font-color: white;
+$primary-border-radius: 20px;
+$card-max-width: 400px;
+$card-max-height: 600px;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    cursor: url('assets/icons/cursor.png') 0 0, pointer;
+    background-color: $background-color;
+    margin: 0;
+    main {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 3rem;
+        height: 100vh;
+        margin: 0 auto;
+        .title-question {
+            font-family: $title-font;
+            color: $primary-font-color;
+            font-size: 3rem;
+        }
+        .main-container {
+            justify-content: center;
+            display: flex;
+            gap: 20rem;
+            .card {
+                max-width: $card-max-width;
+                text-align: center;
+                .card-holder {
+                    overflow: hidden;
+                    border-radius: $primary-border-radius;
+                    img {
+                        width: $card-max-width;
+                        height: $card-max-height;
+                        border-radius: $primary-border-radius;
+                        transition: transform 7s ease;
+                        &:hover {
+                            transform: scale(1.5);
+                            cursor: url('assets/icons/click2.png') 8 8, pointer ;
+                        }
+                    }
+                }
+                p {
+                    width: $card-max-width;
+                    margin: 0 auto;
+                    margin-top: .3rem;
+                    overflow-wrap: break-word;
+                    font-size: 1.70rem;
+                    font-family: $title-font;
+                    color: $primary-font-color;
+                }
+            }
+            
+        }
+        .wrong-answer {
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(17, 17, 17);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            display: none;
+            .wrong-answer-h1 {
+                font-size: 5rem;
+                color: rgb(224, 37, 37);
+                font-family: $title-font;
+            }
+            a {
+                text-decoration: none;
+                color: $primary-font-color;
+                font-size: 3rem;
+                &:hover {
+                    cursor: url('assets/icons/click2.png') 8 8, pointer;
+                }
+            }
+        }
+    }
+}

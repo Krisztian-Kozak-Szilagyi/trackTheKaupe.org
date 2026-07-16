@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  cursor: url("assets/icons/cursor.png") 0 0, pointer;
+  background-color: #333;
+  margin: 0;
+}
+body main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 3rem;
+  height: 100vh;
+  margin: 0 auto;
+}
+body main .title-question {
+  font-family: "Poetsen One", sans-serif;
+  color: white;
+  font-size: 3rem;
+}
+body main .main-container {
+  justify-content: center;
+  display: flex;
+  gap: 20rem;
+}
+body main .main-container .card {
+  max-width: 400px;
+  text-align: center;
+}
+body main .main-container .card .card-holder {
+  overflow: hidden;
+  border-radius: 20px;
+}
+body main .main-container .card .card-holder img {
+  width: 400px;
+  height: 600px;
+  border-radius: 20px;
+  transition: transform 7s ease;
+}
+body main .main-container .card .card-holder img:hover {
+  transform: scale(1.5);
+  cursor: url("assets/icons/click2.png") 8 8, pointer;
+}
+body main .main-container .card p {
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 0.3rem;
+  overflow-wrap: break-word;
+  font-size: 1.7rem;
+  font-family: "Poetsen One", sans-serif;
+  color: white;
+}
+body main .wrong-answer {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(17, 17, 17);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+body main .wrong-answer .wrong-answer-h1 {
+  font-size: 5rem;
+  color: rgb(224, 37, 37);
+  font-family: "Poetsen One", sans-serif;
+}
+body main .wrong-answer a {
+  text-decoration: none;
+  color: white;
+  font-size: 3rem;
+}
+body main .wrong-answer a:hover {
+  cursor: url("assets/icons/click2.png") 8 8, pointer;
+}/*# sourceMappingURL=style.css.map */
